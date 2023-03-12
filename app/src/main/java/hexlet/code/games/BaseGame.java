@@ -16,7 +16,7 @@ public class BaseGame {
             System.out.println("Question: " + card.getQuestion());
 
             System.out.print("Your answer: ");
-            String userAnswer = Util.getScanner().next();
+            String userAnswer = Util.SCANNER.next();
 
             if (card.getExpectedAnswer().equals(userAnswer)) {
                 System.out.println("Correct!");

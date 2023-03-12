@@ -4,24 +4,24 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Util {
-    private static final Scanner scanner = new Scanner(System.in);
-    private static final Random random = new Random();
+    public static final Scanner SCANNER = new Scanner(System.in);
+    public static final Random RANDOM = new Random();
     public static String greetingAndGetUserName() {
         System.out.println("Welcome to the Brain Games!");
         System.out.print("May I have your name? ");
 
-        String name = scanner.next();
+        String name = SCANNER.next();
         System.out.println("Hello, " + name + "!");
 
         return name;
     }
 
     public static Scanner getScanner() {
-        return scanner;
+        return SCANNER;
     }
 
     public static Random getRandom() {
-        return random;
+        return RANDOM;
     }
 
     public static int calculateGCD(int a, int b) {
