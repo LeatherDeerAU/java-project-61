@@ -1,9 +1,9 @@
 package hexlet.code.games;
 
 import hexlet.code.Card;
+import hexlet.code.common.Util;
 
 import static hexlet.code.App.QUESTION_COUNT;
-import static hexlet.code.common.Util.random;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,7 +13,7 @@ public class EvenCheckGame {
         List<Card> cards = new ArrayList<>();
 
         for (int i = 0; i < QUESTION_COUNT; i++) {
-            int curNum = random.nextInt(RANDOM_BOUND);
+            int curNum = Util.getRandom().nextInt(RANDOM_BOUND);
 
             String question = String.valueOf(curNum);
             String expectedAnswer = (curNum % 2 == 0) ? "yes" : "no";

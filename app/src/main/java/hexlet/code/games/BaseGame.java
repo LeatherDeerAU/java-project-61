@@ -3,7 +3,6 @@ package hexlet.code.games;
 import hexlet.code.Card;
 import hexlet.code.common.Util;
 
-import static hexlet.code.common.Util.scanner;
 import java.util.List;
 
 public class BaseGame {
@@ -17,7 +16,7 @@ public class BaseGame {
             System.out.println("Question: " + card.getQuestion());
 
             System.out.print("Your answer: ");
-            String userAnswer = scanner.next();
+            String userAnswer = Util.getScanner().next();
 
             if (card.getExpectedAnswer().equals(userAnswer)) {
                 System.out.println("Correct!");
