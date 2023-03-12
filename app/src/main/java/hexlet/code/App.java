@@ -7,13 +7,11 @@ import hexlet.code.games.GcdGame;
 import hexlet.code.games.IsPrimeGame;
 import hexlet.code.games.ProgressionGame;
 
-import java.util.Scanner;
+import static hexlet.code.common.Util.SCANNER;
 
 public class App {
     public static final int QUESTION_COUNT = 3;
     public static void main(String[] args) {
-        Scanner scanner = Util.getScanner();
-
         System.out.println("Welcome to the Brain Games!");
         System.out.println("""
                 Please enter the game number and press Enter.
@@ -27,7 +25,7 @@ public class App {
                 """.trim());
 
         System.out.print("Your choice: ");
-        String userChoise = scanner.next();
+        String userChoise = SCANNER.next();
 
         System.out.println();
 
@@ -42,6 +40,6 @@ public class App {
             default -> System.out.println("Enter correct number.");
         }
 
-        scanner.close();
+        SCANNER.close();
     }
 }

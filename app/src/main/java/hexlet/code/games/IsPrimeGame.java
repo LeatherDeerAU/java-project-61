@@ -1,9 +1,10 @@
 package hexlet.code.games;
 
 import hexlet.code.Card;
-import hexlet.code.common.Util;
 
 import static hexlet.code.App.QUESTION_COUNT;
+
+import static hexlet.code.common.Util.RANDOM;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,7 +16,7 @@ public class IsPrimeGame {
         List<Card> quizCards = new ArrayList<>();
 
         for (int i = 0; i < QUESTION_COUNT; i++) {
-            int number = Util.getRandom().nextInt(RANDOM_BOUND);
+            int number = RANDOM.nextInt(RANDOM_BOUND);
             String question = String.valueOf(number);
             String answer = isPrime(number) ? "yes" : "no";
 

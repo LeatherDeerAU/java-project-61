@@ -1,12 +1,11 @@
 package hexlet.code.games;
 
 import hexlet.code.Card;
-import hexlet.code.common.Util;
 
 import static hexlet.code.App.QUESTION_COUNT;
+import static hexlet.code.common.Util.RANDOM;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 public class CalcGame {
     private static final String[] OPERATIONS = {"+", "*"};
@@ -14,12 +13,11 @@ public class CalcGame {
 
     public static void run() {
         List<Card> cards = new ArrayList<>();
-        Random random = Util.getRandom();
 
         for (int i = 0; i < QUESTION_COUNT; i++) {
-            int firstNum = random.nextInt(RANDOM_BOUND);
-            int secondNum = random.nextInt(RANDOM_BOUND);
-            String op = OPERATIONS[random.nextInt(OPERATIONS.length)];
+            int firstNum = RANDOM.nextInt(RANDOM_BOUND);
+            int secondNum = RANDOM.nextInt(RANDOM_BOUND);
+            String op = OPERATIONS[RANDOM.nextInt(OPERATIONS.length)];
 
             String question = String.format("%d %s %d", firstNum, op, secondNum);
             String expectedAns;

@@ -16,14 +16,6 @@ public class Util {
         return name;
     }
 
-    public static Scanner getScanner() {
-        return SCANNER;
-    }
-
-    public static Random getRandom() {
-        return RANDOM;
-    }
-
     public static int calculateGCD(int a, int b) {
         while (b != 0) {
             a = a % b;
