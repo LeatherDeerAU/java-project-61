@@ -8,12 +8,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class IsPrimeGame {
+    private static final int RANDOM_BOUND = 101;
+
     public static void run() {
         String task = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
         List<Card> quizCards = new ArrayList<>();
 
         for (int i = 0; i < QUESTION_COUNT; i++) {
-            int number = random.nextInt(101);
+            int number = random.nextInt(RANDOM_BOUND);
             String question = String.valueOf(number);
             String answer = isPrime(number) ? "yes" : "no";
 

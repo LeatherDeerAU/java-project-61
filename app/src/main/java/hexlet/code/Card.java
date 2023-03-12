@@ -9,11 +9,19 @@ public class Card {
         this.expectedAnswer = expectedAnswer;
     }
 
+    /**
+     * Getter.
+     * @return question of this card.
+     */
     public String getQuestion() {
-        return question;
+        return this.question;
     }
 
+    /**
+     * Setter.
+     * @return answer of this card.
+     */
     public String getExpectedAnswer() {
-        return expectedAnswer;
+        return this.expectedAnswer;
     }
 }

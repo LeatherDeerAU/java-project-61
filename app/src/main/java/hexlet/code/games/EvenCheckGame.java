@@ -8,11 +8,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class EvenCheckGame {
+    private static final int RANDOM_BOUND = 101;
     public static void run() {
         List<Card> cards = new ArrayList<>();
 
         for (int i = 0; i < QUESTION_COUNT; i++) {
-            int curNum = random.nextInt(1, 100);
+            int curNum = random.nextInt(RANDOM_BOUND);
 
             String question = String.valueOf(curNum);
             String expectedAnswer = (curNum % 2 == 0) ? "yes" : "no";

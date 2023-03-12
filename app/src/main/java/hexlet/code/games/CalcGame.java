@@ -8,15 +8,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CalcGame {
-    static String[] operation = {"+", "*"};
+    private static final String[] OPERATIONS = {"+", "*"};
+    private static final int RANDOM_BOUND = 11;
 
     public static void run() {
         List<Card> cards = new ArrayList<>();
 
         for (int i = 0; i < QUESTION_COUNT; i++) {
-            int firstNum = random.nextInt(11);
-            int secondNum = random.nextInt(11);
-            String op = operation[random.nextInt(2)];
+            int firstNum = random.nextInt(RANDOM_BOUND);
+            int secondNum = random.nextInt(RANDOM_BOUND);
+            String op = OPERATIONS[random.nextInt(OPERATIONS.length)];
 
             String question = String.format("%d %s %d", firstNum, op, secondNum);
             String expectedAns;

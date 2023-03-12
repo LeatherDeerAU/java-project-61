@@ -8,12 +8,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProgressionGame {
+    private static final int PROGRESSION_LOW_BOUND = 5;
+    private static final int PROGRESSION_UP_BOUND = 11;
+
+    private static final int D_LOW_BOUND = 11;
+
+    private static final int D_UP_BOUND = 11;
+
+    private static final int START_UP_BOUND = 11;
+
     public static void run() {
         List<Card> cards = new ArrayList<>();
-        int progressionLength = random.nextInt(5, 11);
+        int progressionLength = random.nextInt(PROGRESSION_LOW_BOUND, PROGRESSION_UP_BOUND);
         for (int i = 0; i < QUESTION_COUNT; i++) {
-            int d = random.nextInt(1, 11);
-            int start = random.nextInt(21);
+            int d = random.nextInt(D_LOW_BOUND, D_UP_BOUND);
+            int start = random.nextInt(START_UP_BOUND);
             int[] progression = buildProgression(progressionLength, start, d);
 
             Card card = buildCard(progression);
