@@ -1,9 +1,11 @@
 package hexlet.code.common;
 
-import static hexlet.code.App.scanner;
+import java.util.Random;
+import java.util.Scanner;
 
 public class Util {
-    public static final int QUESTION_COUNT = 3;
+    public static Scanner scanner = new Scanner(System.in);
+    public static Random random = new Random();
     public static String greetingAndGetUserName() {
         System.out.println("Welcome to the Brain Games!");
         System.out.print("May I have your name? ");

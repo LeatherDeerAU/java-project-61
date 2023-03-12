@@ -3,17 +3,15 @@ package hexlet.code.games;
 import hexlet.code.Card;
 import hexlet.code.common.Util;
 
+import static hexlet.code.App.QUESTION_COUNT;
+import static hexlet.code.common.Util.random;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 public class GcdGame {
     public static void run() {
-        System.out.println("Find the greatest common divisor of given numbers.");
-
-        Random random = new Random();
         List<Card> cards = new ArrayList<>();
-        for (int i = 0; i < Util.QUESTION_COUNT; i++) {
+        for (int i = 0; i < QUESTION_COUNT; i++) {
             int firstNum = random.nextInt(101);
             int secondNum = random.nextInt(101);
 
@@ -24,6 +22,7 @@ public class GcdGame {
             cards.add(new Card(question, expectedAns));
         }
 
-        BaseGame.start(cards);
+        String task = "Find the greatest common divisor of given numbers.";
+        BaseGame.start(cards, task);
     }
 }

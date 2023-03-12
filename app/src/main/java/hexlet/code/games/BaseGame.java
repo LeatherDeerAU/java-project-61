@@ -3,12 +3,14 @@ package hexlet.code.games;
 import hexlet.code.Card;
 import hexlet.code.common.Util;
 
-import static hexlet.code.App.scanner;
+import static hexlet.code.common.Util.scanner;
 import java.util.List;
 
 public class BaseGame {
-    public static void start(List<Card> cards) {
+    public static void start(List<Card> cards, String task) {
         String name = Util.greetingAndGetUserName();
+
+        System.out.println(task);
 
         int correctCount = 0;
         for (Card card : cards) {

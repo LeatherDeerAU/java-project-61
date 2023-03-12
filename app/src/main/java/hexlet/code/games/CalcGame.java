@@ -2,17 +2,15 @@ package hexlet.code.games;
 
 import hexlet.code.Card;
 
-import static hexlet.code.common.Util.QUESTION_COUNT;
+import static hexlet.code.App.QUESTION_COUNT;
+import static hexlet.code.common.Util.random;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 public class CalcGame {
     static String[] operation = {"+", "*"};
 
     public static void run() {
-        Random random = new Random();
-
         List<Card> cards = new ArrayList<>();
 
         for (int i = 0; i < QUESTION_COUNT; i++) {
@@ -31,6 +29,7 @@ public class CalcGame {
             cards.add(new Card(question, expectedAns));
         }
 
-        BaseGame.start(cards);
+        String task = "What is the result of the expression?";
+        BaseGame.start(cards, task);
     }
 }
