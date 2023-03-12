@@ -11,7 +11,7 @@ public class ProgressionGame {
     private static final int PROGRESSION_LOW_BOUND = 5;
     private static final int PROGRESSION_UP_BOUND = 11;
 
-    private static final int D_LOW_BOUND = 11;
+    private static final int D_LOW_BOUND = 1;
 
     private static final int D_UP_BOUND = 11;
 
